@@ -1,3 +1,78 @@
+$enable-flex: true;
+$spotyfiDarkGreen: #162721;
+$spotyfiGreen: #376362;
+$textColor: white;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: $spotyfiDarkGreen;
+  background: -webkit-linear-gradient(left, $spotyfiDarkGreen, $spotyfiGreen);
+  background: -o-linear-gradient(right, $spotyfiDarkGreen, $spotyfiGreen);
+  background: -moz-linear-gradient(right, $spotyfiDarkGreen, $spotyfiGreen);
+  background: linear-gradient(to right, $spotyfiDarkGreen, $spotyfiGreen);
+  color: $textColor;
+}
+
 .container {
-  margin: 50px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.artistsContainer {
+  padding: 10px;
+  .artistContainer {
+    padding: 10px;
+    .artist {
+      color: darken( $textColor, 30% );
+      font-size: 12px;
+      height: 100%;
+      background: #222222;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 10px #000000;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.05);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.05);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.05);
+        transition: all 200ms ease-in;
+        transform: scale(1.05);
+      }
+      h3 {
+        font-size: 18px;
+        margin: 10px 5px 15px 10px;
+      }
+      .info {margin: 5px -5px;}
+    }
+  }
+}
+
+.artist {
+  .imageContainer {
+    img {width: 100%;}
+  }
+}
+
+.loading {
+  font-size: 18px;
+  progress {width: 300px;}
+}
+
+.albumsContainer {
+  height: 100vh;
 }

@@ -1,10 +1,14 @@
 import {combineReducers} from 'redux';
 import {routerReducer} from 'react-router-redux';
-import {reducer as formReducer} from 'redux-form';
+import search from './search';
+import artists from './artists';
+import artist from './artist';
+import albums from './albums';
 
-// main reducers
 export const reducers = combineReducers({
   routing: routerReducer,
-  form: formReducer
-  // your reducer here
+  search: search,
+  artists: artists,
+  artist: artist,
+  albums: albums
 });
