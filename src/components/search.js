@@ -12,8 +12,7 @@ let SearchInput = React.createClass({
     if (!e.keyCode || e && e.keyCode == 13 && e.shiftKey == false) {
       this.props.dispatch({
         type: 'ARTISTS_FETCH_LIST',
-        artistName: this.props.artistName,
-        isFetching: true
+        artistName: this.props.artistName
       });
     }
   },

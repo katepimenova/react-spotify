@@ -1,16 +1,17 @@
 $enable-flex: true;
-$spotyfiDarkGreen: #162721;
-$spotyfiGreen: #376362;
+$spotifyLightGray: #404040;
+$spotifyGray: #222222;
+$spotifyDarkGray:#191A1A;
 $textColor: white;
 
 html, body {
   width: 100%;
   height: 100%;
-  background: $spotyfiDarkGreen;
-  background: -webkit-linear-gradient(left, $spotyfiDarkGreen, $spotyfiGreen);
-  background: -o-linear-gradient(right, $spotyfiDarkGreen, $spotyfiGreen);
-  background: -moz-linear-gradient(right, $spotyfiDarkGreen, $spotyfiGreen);
-  background: linear-gradient(to right, $spotyfiDarkGreen, $spotyfiGreen);
+  background: $spotifyGray;
+  background: -webkit-linear-gradient(left, $spotifyDarkGray, $spotifyLightGray, $spotifyDarkGray);
+  background: -o-linear-gradient(right, $spotifyDarkGray, $spotifyLightGray, $spotifyDarkGray);
+  background: -moz-linear-gradient(right, $spotifyDarkGray, $spotifyLightGray, $spotifyDarkGray);
+  background: linear-gradient(to right, $spotifyDarkGray, $spotifyLightGray, $spotifyDarkGray);
   color: $textColor;
 }
 
@@ -62,9 +63,13 @@ h2 {
   }
 }
 
-.artist {
-  .imageContainer {
-    img {width: 100%;}
+.imageContainer {
+  img {width: 100%;}
+}
+
+.artistDetails {
+  .artist {
+    margin-top: 20px;
   }
 }
 
@@ -74,5 +79,31 @@ h2 {
 }
 
 .albumsContainer {
-  height: 100vh;
+  .albumContainer {
+    padding: 10px;
+    .album {
+      color: darken($textColor, 30%);
+      font-size: 12px;
+      height: 100%;
+      background: $spotifyGray;
+      filter: opacity(80%);
+      cursor: pointer;
+      &:hover {
+        filter: opacity(100%);
+      }
+    }
+  }
+  h2 {margin-bottom: 17px;}
+  h4 {
+    font-size: 15px;
+    margin: 10px 5px 15px 10px;
+  }
+}
+
+.albumTitle h3 {
+  margin: 4px 10px 24px;
+}
+
+.tracks {
+  margin-top: 20px;
 }

@@ -8,8 +8,8 @@ module.exports = {
     __dirname + '/' + app_root + '/index.js',
   ],
   output: {
-    path: __dirname + '/public/js',
-    publicPath: 'js/',
+    path: __dirname + '/build/js',
+    publicPath: '/build/js',
     filename: 'bundle.js',
   },
   module: {
@@ -29,14 +29,11 @@ module.exports = {
       }
     ],
   },
-  devServer: {
-    contentBase: __dirname + '/public',
-  },
   plugins: [
     new CleanWebpackPlugin(['css/main.css', 'js/bundle.js'], {
-      root: __dirname + '/public',
+      root: __dirname + '/build',
       verbose: true,
-      dry: false, // true for simulation
+      dry: false
     }),
   ],
 };

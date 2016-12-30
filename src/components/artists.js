@@ -33,7 +33,7 @@ let Artists = React.createClass({
           </div>
         :
           <div className='artistsContainer row'>
-            {artists.items.length == 0 ?
+            {artists.items.length === 0 ?
               <div className='nothingFound col-xs-12'>Nothing Found</div>
             :
               _.map(artists.items, artist => this.renderArtistCard(artist))

@@ -10,7 +10,7 @@ let ArtistDetails = React.createClass({
           {artist.images.length > 0 ?
             <img src={artist.images[1].url}></img>
             :
-            <img src='/img/spotify.png'></img>
+            <img src='https://developer.spotify.com/wp-content/uploads/2014/06/spotify-design.png'></img>
           }
         </div>
         <h3>{artist.name}</h3>

@@ -5,9 +5,9 @@ const initialState = {
 export default function albums(state=initialState, action) {
   switch (action.type) {
   case 'ARTIST_FETCH_ALBUMS':
-    return {...state, isFetching: true};
+    return {isFetching: true};
   case 'ARTIST_DISPLAY_ALBUMS':
-    return {...state, items: action.albums.items, isFetching: false};
+    return {...action.albums, isFetching: false};
   default:
     return state;
   }
