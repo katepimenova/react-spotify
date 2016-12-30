@@ -2,13 +2,21 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 let SearchInput = React.createClass({
+  getInitialState() {
+    return {error: false};
+  },
   setInputFieldValue(e) {
+    this.setState({error: false})
     this.props.dispatch({
       type: 'SET_ARTIST_NAME',
       artistName: e.target.value
     });
   },
   searchItems(e) {
+    if (!this.props.artistName) {
+      this.setState({error: true});
+      return;
+    }
     if (!e.keyCode || e && e.keyCode == 13 && e.shiftKey == false) {
       this.props.dispatch({
         type: 'ARTISTS_FETCH_LIST',
@@ -36,6 +44,9 @@ let SearchInput = React.createClass({
               <button className='btn btn-secondary' type='button' onClick={this.searchItems}>Search</button>
             </span>
           </div>
+          {this.state.error &&
+            <div className='error'>Search field should not be empty!</div>
+          }
         </div>
       </div>
     );
