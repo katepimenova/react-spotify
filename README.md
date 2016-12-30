@@ -1,4 +1,4 @@
-# The mail goals
+# The main goals
 
 1. Here is a link to Spotify API - https://developer.spotify.com/web-api/user-guide/ (you have to use endpoints like ARTISTS, ALBUMS, SEARCH)
 2. The app should request Spotify API about albums, artists and searching.
@@ -23,10 +23,12 @@ web browser.
 
 - install all dependencies, and run project locally.
 
+
       
     npm test
 
 - run unit tests.
+
 
 
     npm run lint
